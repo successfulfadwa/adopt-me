@@ -1,14 +1,19 @@
-import React from "react";
+import { createRoot } from "react-dom/client";
+import Pet from "./Pet";
 
-const Pet = (props) => {
+// delete the Pet component
+
+const App = () => {
   return (
-	
     <div>
-      <h1>{props.name}</h1>
-      <h2>{props.animal}</h2>
-      <h2>{props.breed}</h2>
+      <h1>Adopt Me!</h1>
+      <Pet name="Luna" animal="dog" breed="Havanese" />
+      <Pet name="Pepper" animal="bird" breed="Cockatiel" />
+      <Pet name="Doink" animal="cat" breed="Mix" />
     </div>
   );
 };
 
-export default Pet;
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<App />);
