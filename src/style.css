@@ -4,9 +4,10 @@
   }
   
   body {
-	background-color: #81a69b;
+	background:scroll;
 	background-image: url(https://cdn.shopify.com/s/files/1/0717/2092/7513/products/PureWhiteCanvas_A_cute_dog_with_a_toy_doll_Lofi_blue_sky_and_wh_bf384191-65e2-4741-aa79-c91f8dab8726.png?v=1676346344&width=1426);
 	background-repeat: no-repeat;
+	
 	background-size: cover;
 	background-position: center center;
 	margin: 0;
@@ -89,7 +90,10 @@ padding-top: 2%;
 .pet img {
 	width: 100px !important;
 	min-height: 100px !important;
-	
+	border-radius: 148px 148px 148px 148px !important;
+	-webkit-border-radius: 148px 148px 148px 148px !important;
+	-moz-border-radius: 148px 148px 148px 148px !important;
+	overflow: hidden !important;
 }
 
   
@@ -110,6 +114,26 @@ padding-top: 2%;
 	height: 100px;
 	float: left;
 	margin: 0px 20px 0px 10px;
+	border-radius: 148px 148px 148px 148px !important;
+	-webkit-border-radius: 148px 148px 148px 148px !important;
+	-moz-border-radius: 148px 148px 148px 148px !important;
+	background: none;
+	border-bottom-right-radius: 0px;
+	border-bottom: #1109a400 0px solid;
+	border: 0px;
+
+
+  }
+  .image-container:hover {
+	
+	background:none;
+	border-bottom-right-radius: 0px;
+	border-bottom: #1109a400 ;
+
+	/* Add desired radius value */
+
+
+
   }
   
   .pet h1 {
@@ -314,6 +338,8 @@ padding-top: 2%;
 	  background-position: right center; /* change the direction of the change here */
 	  color: #fff;
 	  text-decoration: none;
+	  border: 2px solid rgba(166, 86, 0, 0.414);
+
 
 	}
 	
@@ -341,8 +367,8 @@ padding-top: 2%;
   }
   
   .search-params button:focus {
-	border: 1px solid rgba(100, 148, 237, 0.096);
-  }
+	border: 2px solid rgba(166, 86, 0, 0.414);
+}
   
   #modal {
 	background-color: rgba(0, 0, 0, 0.9);
@@ -378,6 +404,8 @@ padding-top: 2%;
 	  background-position: right center; /* change the direction of the change here */
 	  color: #fff;
 	  text-decoration: none;
+	  border: 2px solid rgba(166, 86, 0, 0.414);
+
 	}
 	
   
