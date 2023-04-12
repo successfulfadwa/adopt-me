@@ -7,7 +7,6 @@ import ErrorBoundary from "./ErrorBoundary";
 import fetchPet from "./fetchPet";
 import Carousel from "./Carousel";
 
-
 const Details = () => {
   const { id } = useParams();
   const [showModal, setShowModal] = useState(false);
@@ -42,7 +41,7 @@ const Details = () => {
 		
         <p>{pet.description}</p>
         {showModal ? (
-          <Modal >
+          <Modal>
             <div>
               <h1>Would you like to adopt {pet.name}?</h1>
               <div className="buttons">

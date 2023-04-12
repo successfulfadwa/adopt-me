@@ -6,7 +6,6 @@ import AdoptedPetContext from "./AdoptedPetContext";
 import Details from "./Details";
 import SearchParams from "./SearchParams";
 
-
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -25,7 +24,7 @@ const App = () => {
           <QueryClientProvider client={queryClient}>
             <header>
 
-              <Link   to="/">Adopt Me!</Link>
+              <Link to="/">Adopt Me!</Link>
 
             </header>
             <Routes>
@@ -35,7 +34,6 @@ const App = () => {
           </QueryClientProvider>
         </AdoptedPetContext.Provider>
       </BrowserRouter>
-      
     </div>
   );
 };
