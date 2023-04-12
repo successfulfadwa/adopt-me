@@ -1,7 +1,7 @@
 {
 	"headers": [
 	  {
-		"source": "/api/(.*)",
+		"source": "http://pets-v2.dev-apis.com/(.*)",
 		"headers": [
 		  { "key": "Access-Control-Allow-Credentials", "value": "true" },
 		  { "key": "Access-Control-Allow-Origin", "value": "*" },
