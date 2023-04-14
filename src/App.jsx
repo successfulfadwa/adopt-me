@@ -24,9 +24,25 @@ const App = () => {
   const adoptedPet = useState(null);
   return (
     <div>
-<div style={{ backgroundColor: '#fb8948', width: '2px', position: 'fixed', top: 100, bottom: 0, right: 50 }}></div>
-<div style={{  backgroundColor: 'rgb(251,137,72)',
-    background: 'linear-gradient(180deg, rgba(251,137,72,1) 0%, rgba(180,104,61,0.22454919467787116) 100%)', width: '2px', position: 'fixed', top: 500, bottom: 0, left: 50 }}>
+      <div className="left and right">
+<div  className="right " style={{ backgroundColor: 'rgb(251,137,72)', background: 'linear-gradient(180deg, rgba(251,137,72,1) 0%, rgba(180,104,61,0.22454919467787116) 100%)',  width: '2px', position: 'fixed', top: 500, bottom: 0,  right: 50 }}>
+<div style={{ 
+    backgroundColor: 'rgb(251,137,72)',
+    background: 'linear-gradient(0deg, rgba(251,137,72,1) 0%, rgba(180,104,61,0.22454919467787116) 100%)',
+    width: '2px',
+    position: 'fixed',
+    top: 100,
+    bottom: 450,
+    right: 50
+}}>
+</div>
+   <div style={{ transform: 'rotate(-90deg)', transformOrigin: 'top left', position: 'absolute', top: -10, left: -10,color: '#a43a09'  }}>
+            hi
+  </div></div>
+
+
+
+<div  className="left " style={{  backgroundColor: 'rgb(251,137,72)', background: 'linear-gradient(180deg, rgba(251,137,72,1) 0%, rgba(180,104,61,0.22454919467787116) 100%)', width: '2px', position: 'fixed', top: 500, bottom: 0, left: 50 }}>
 <div style={{ transform: 'rotate(-90deg)', transformOrigin: 'top left', position: 'absolute', top: -10, left: -10,color: '#a43a09'  }}>
             hi
   </div>
@@ -41,6 +57,7 @@ const App = () => {
 }}>
 </div>
 
+</div>
 </div>
 
       <BrowserRouter>
