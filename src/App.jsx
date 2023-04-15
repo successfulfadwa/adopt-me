@@ -85,7 +85,7 @@ const App = () => {
         style={{ width: '100%', display: 'block' }}
       />
     </div>
-  </div>
+  </div>Designed & Built by Fadwa Aljaoui
   {/* Footer content */}
 </footer>
 
