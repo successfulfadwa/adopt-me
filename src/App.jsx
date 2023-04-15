@@ -60,22 +60,42 @@ const App = () => {
 </div>
 </div>
 
-      <BrowserRouter>
-        <AdoptedPetContext.Provider value={adoptedPet}>
-          <QueryClientProvider client={queryClient}>
-            <header>
+<BrowserRouter>
+  <AdoptedPetContext.Provider value={adoptedPet}>
+    <QueryClientProvider client={queryClient}>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        {/* Main content */}
+        <header>
+          <Link to="/">Adopt Me!</Link>
+        </header>
+        <div style={{ flex: 1 }}>
+          <Routes>
+            <Route path="/details/:id" element={<Details />} />
+            <Route path="/" element={<SearchParams />} />
+          </Routes>
+        </div>
 
-              <Link to="/">Adopt Me!</Link>
+        {/* Footer */}
+        <footer style={{  paddingTop: '10rem', textAlign: 'center', position: 'relative' }}>
+  <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', zIndex: '-1' }}>
+    <div style={{ paddingTop: '1rem' }}>
+      <img
+        src="./png.png"
+        alt="footer"
+        style={{ width: '100%', display: 'block' }}
+      />
+    </div>
+  </div>
+  {/* Footer content */}
+</footer>
 
-            </header>
-            <Routes>
-              <Route path="/details/:id" element={<Details />} />
-              <Route path="/" element={<SearchParams />} />
-            </Routes>
-          </QueryClientProvider>
-        </AdoptedPetContext.Provider>
-      </BrowserRouter>
 
+
+
+      </div>
+    </QueryClientProvider>
+  </AdoptedPetContext.Provider>
+</BrowserRouter>
 
     </div>
   );
