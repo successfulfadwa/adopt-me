@@ -35,10 +35,45 @@ const App = () => {
     bottom: 500,
     right: 50
 }}>
+</div><div style={{ transform: 'rotate(-90deg)', transformOrigin: 'top left', position: 'absolute', top: -16, left: -13, color: '#a43a09', textAlign: 'center' }}>
+  <span style={{ position: 'relative' , color: '#f5773d'}}>
+    Adopt.Me@gmail.com
+    <style>
+      {`
+        span:hover {
+          color: #D66712 !important;
+          animation: glowing 2s infinite; /* Add animation with desired duration */
+
+
+        }
+        span:hover::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -0.5rem;
+          width: 100%;
+          height: 1px;
+          background-color: #f78b4e;
+        }
+
+        @keyframes glowing {
+          0% {
+            text-shadow: 0 0 5px rgba(255, 87, 34, 0.8), 0 0 10px rgba(255, 87, 34, 0.8), 0 0 20px rgba(255, 87, 34, 0.8), 0 0 30px rgba(255, 87, 34, 0.8);
+          }
+          50% {
+            text-shadow: 0 0 20px rgba(216, 67, 21, 0.8), 0 0 40px rgba(216, 67, 21, 0.8), 0 0 60px rgba(216, 67, 21, 0.8), 0 0 80px rgba(216, 67, 21, 0.8);
+          }
+          100% {
+            text-shadow: 0 0 25px rgba(255, 87, 34, 0.8), 0 0 100px rgba(255, 87, 34, 0.8), 0 0 20px rgba(255, 87, 34, 0.8), 0 0 30px rgba(255, 87, 34, 0.8);
+          }
+        
+        }
+      `}
+    </style>
+  </span>
 </div>
-   <div style={{ transform: 'rotate(-90deg)', transformOrigin: 'top left', position: 'absolute', top: -16, left: -13,color: '#a43a09'  , textAlign: 'center'}}>
-               Adopt.Me@gmail.com
-  </div></div>
+
+</div>
 
 
 
