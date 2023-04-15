@@ -25,19 +25,19 @@ const App = () => {
   return (
     <div>
       <div className="left and right">
-<div  className="right " style={{ backgroundColor: 'rgb(251,137,72)', background: 'linear-gradient(180deg, rgba(251,137,72,1) 0%, rgba(180,104,61,0.22454919467787116) 100%)',  width: '2px', position: 'fixed', top: 500, bottom: 0,  right: 50 }}>
+<div  className="right " style={{ backgroundColor: 'rgb(251,137,72)', background: 'linear-gradient(180deg, rgba(251,137,72,1) 0%, rgba(180,104,61,0.22454919467787116) 100%)',  width: '2px', position: 'fixed', top: 580, bottom: 0,  right: 50 }}>
 <div style={{ 
     backgroundColor: 'rgb(251,137,72)',
     background: 'linear-gradient(0deg, rgba(251,137,72,1) 0%, rgba(180,104,61,0.22454919467787116) 100%)',
     width: '2px',
     position: 'fixed',
     top: 100,
-    bottom: 450,
+    bottom: 500,
     right: 50
 }}>
 </div>
-   <div style={{ transform: 'rotate(-90deg)', transformOrigin: 'top left', position: 'absolute', top: -10, left: -10,color: '#a43a09'  }}>
-            hi
+   <div style={{ transform: 'rotate(-90deg)', transformOrigin: 'top left', position: 'absolute', top: -16, left: -13,color: '#a43a09'  , textAlign: 'center'}}>
+               Adopt.Me@gmail.com
   </div></div>
 
 
@@ -85,10 +85,9 @@ const App = () => {
         style={{ width: '100%', display: 'block' }}
       />
     </div>
-  </div>Designed & Built by Fadwa Aljaoui
+  </div><div style={{  padding: '0.7rem', textAlign: 'center', position: 'relative' }}>Designed & Built by Fadwa Aljaoui</div>
   {/* Footer content */}
 </footer>
-
 
 
 
