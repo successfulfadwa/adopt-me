@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </div>
         <style>
-  {`
+          {`
     .link {
     
 
@@ -34,7 +34,7 @@ const Footer = () => {
       color: #ff6b6b;
     }
   `}
-</style>
+        </style>
 
         <div
           style={{
@@ -46,9 +46,14 @@ const Footer = () => {
           }}
         >
           Designed & Built by
-				
-					<a href="https://github.com/successfulfadwa"  style={{ color: "#BF2020", textDecoration: "none" }}    className="link" // Apply the "link" class to the link element
->  Fadwa Aljaoui</a> 
+          <a
+            href="https://github.com/successfulfadwa"
+            style={{ color: "#BF2020", textDecoration: "none" }}
+            className="link" // Apply the "link" class to the link element
+          >
+            {" "}
+            Fadwa Aljaoui
+          </a>
         </div>
         {/* Footer content */}
       </footer>
