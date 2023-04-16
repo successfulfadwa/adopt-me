@@ -94,7 +94,7 @@ const App = () => {
           textAlign: 'center'
           ,color:'#f5773d'
         }}>
-<img src="./instagram.png" alt="instagram"></img>
+<img src="./dist/instagram.png" alt="instagram"></img>
         </div>
       </div>
        
