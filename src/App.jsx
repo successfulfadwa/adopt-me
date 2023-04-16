@@ -5,6 +5,13 @@ import { useState } from "react";
 import AdoptedPetContext from "./AdoptedPetContext";
 import Details from "./Details";
 import SearchParams from "./SearchParams";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faTiktok, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+// Add the Font Awesome brand icons to the library
+library.add(fab);
 /*const StyledContent = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -18,6 +25,9 @@ const queryClient = new QueryClient({
     },
   },
 });
+const iconStyle = {
+  color: '#f5773d'
+};
 
 
 const App = () => {
@@ -35,7 +45,7 @@ const App = () => {
     bottom: 500,
     right: 50
 }}>
-</div><div style={{ transform: 'rotate(-90deg)', transformOrigin: 'top left', position: 'absolute', top: -16, left: -13, color: '#a43a09', textAlign: 'center' }}>
+</div><div style={{ transform: 'rotate(-90deg)', transformOrigin: 'top left', position: 'absolute', top: -16, left: -13, textAlign: 'center' }}>
   <span style={{ position: 'relative' , color: '#f5773d'}}>
     Adopt.Me@gmail.com
     <style>
@@ -77,10 +87,25 @@ const App = () => {
 
 
 
-<div  className="left " style={{  backgroundColor: 'rgb(251,137,72)', background: 'linear-gradient(180deg, rgba(251,137,72,1) 0%, rgba(180,104,61,0.22454919467787116) 100%)', width: '2px', position: 'fixed', top: 500, bottom: 0, left: 50 }}>
-<div style={{ transform: 'rotate(-90deg)', transformOrigin: 'top left', position: 'absolute', top: -10, left: -10,color: '#a43a09'  }}>
-            hi
-  </div>
+<div  className="left " style={{   background: 'linear-gradient(180deg, rgba(251,137,72,1) 0%, rgba(180,104,61,0.22454919467787116) 100%)', width: '2px', position: 'fixed', top: 700, bottom: 0, left: 50 }}>
+<div style={{
+        transform: 'rotate(-90deg)',
+        transformOrigin: 'top left',
+        position: 'absolute',
+        top: -10,
+        left: -10
+      }}>
+        <div style={{
+          writingMode: 'vertical-rl',
+          textOrientation: 'upright',
+          textAlign: 'center'
+          ,color:'#f5773d'
+        }}>
+         hi
+        </div>
+      </div>
+      
+
   <div style={{ 
     backgroundColor: 'rgb(251,137,72)',
     background: 'linear-gradient(0deg, rgba(251,137,72,1) 0%, rgba(180,104,61,0.22454919467787116) 100%)',

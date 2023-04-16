@@ -66,6 +66,10 @@
 	box-shadow: 0px 0px 12px #aaa, -0px -0px 12px #fff;
 	box-shadow: 0px 0px 12px #aaa, -0px -0px 12px #fff;
   }
+  .custom-icon {
+color: #f76c1b !important;
+	padding: 0100%;
+  }
   
   .pet {
 	width: 100%;
