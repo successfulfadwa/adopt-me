@@ -25,6 +25,17 @@ const Footer = () => {
             />
           </div>
         </div>
+        <style>
+  {`
+    .link {
+    
+
+    .link:hover {
+      color: #ff6b6b;
+    }
+  `}
+</style>
+
         <div
           style={{
             padding: "0.57rem",
@@ -34,7 +45,10 @@ const Footer = () => {
             color: "#8B4513",
           }}
         >
-          Designed & Built by Fadwa Aljaoui
+          Designed & Built by
+				
+					<a href="https://github.com/successfulfadwa"  style={{ color: "#BF2020", textDecoration: "none" }}    className="link" // Apply the "link" class to the link element
+>  Fadwa Aljaoui</a> 
         </div>
         {/* Footer content */}
       </footer>
