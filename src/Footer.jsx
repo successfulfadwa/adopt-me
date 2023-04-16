@@ -27,9 +27,11 @@ const Footer = () => {
         </div>
         <div
           style={{
-            padding: "0.7rem",
+            padding: "0.57rem",
             textAlign: "center",
             position: "relative",
+            fontFamily: "lucida sans unicode", // Specify the web-safe font family
+            color: "#8B4513",
           }}
         >
           Designed & Built by Fadwa Aljaoui

@@ -68,10 +68,19 @@ const SearchParams = () => {
         ) : null}
         <label htmlFor="location">
           Location
-          <input id="location" name="location" placeholder="Location" />
+          <input id="location" name="location" placeholder="Location" style={{   borderRadius: '25px', // Set the border radius for all corners
+        padding: '10px', // Set the padding
+        fontSize: '16px', // Set the font size
+        backgroundColor: '#f2f2f2', // Set the background color
+        border: 'none', // Remove the border
+        outline: 'none', // Remove the outline
+        color: '#333333', // Set the text color
+        width: '550%', // Set the width to 100%
+        boxSizing: 'border-box', // Include padding and border in width
+    }} />
         </label>
 
-        <label htmlFor="animal">
+        <label htmlFor="animal " >
           Animal
           <select
             id="animal"
@@ -82,6 +91,17 @@ const SearchParams = () => {
             onBlur={(e) => {
               setAnimal(e.target.value);
             }}
+            style={{   borderRadius: '25px', // Set the border radius for all corners
+        paddingLeft: '10px', // Set the padding
+        fontSize: '16px', // Set the font size
+        backgroundColor: '#f2f2f2', // Set the background color
+        border: 'none', // Remove the border
+        outline: 'none', // Remove the outline
+        color: '#777777', // Set the text color
+        width: '550%', // Set the width to 100%
+        cursor: 'pointer', 
+    }} 
+            
           >
             <option />
             {ANIMALS.map((animal) => (
@@ -90,11 +110,22 @@ const SearchParams = () => {
               </option>
             ))}
           </select>
+          
         </label>
 
-        <label htmlFor="breed">
+        <label htmlFor="breed" >
           Breed
-          <select disabled={!breeds.length} id="breed" name="breed">
+          <select disabled={!breeds.length} id="breed" name="breed"   style={{   borderRadius: '25px', // Set the border radius for all corners
+        paddingLeft: '10px', // Set the padding
+        fontSize: '16px', // Set the font size
+        backgroundColor: '#f2f2f2', // Set the background color
+        border: 'none', // Remove the border
+        outline: 'none', // Remove the outline
+        color: '#777777', // Set the text color
+        width: '550%', // Set the width to 100%
+        cursor: 'pointer', 
+    }} 
+          >
             <option />
             {breeds.map((breed) => (
               <option key={breed} value={breed}>

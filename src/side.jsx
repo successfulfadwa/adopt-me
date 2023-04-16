@@ -45,7 +45,7 @@ const Side = () => {
                 {`
         span:hover {
           color: #D66712 !important;
-          animation: glowing 2s infinite; /* Add animation with desired duration */
+          animation: glowing2 2s infinite; /* Add animation with desired duration */
 
 
         }
@@ -59,16 +59,16 @@ const Side = () => {
           background-color: #f78b4e;
         }
 
-        @keyframes glowing {
-          0% {
-            text-shadow: 0 0 5px rgba(255, 87, 34, 0.8), 0 0 10px rgba(255, 87, 34, 0.8), 0 0 20px rgba(255, 87, 34, 0.8), 0 0 30px rgba(255, 87, 34, 0.8);
-          }
-          50% {
-            text-shadow: 0 0 20px rgba(216, 67, 21, 0.8), 0 0 40px rgba(216, 67, 21, 0.8), 0 0 60px rgba(216, 67, 21, 0.8), 0 0 80px rgba(216, 67, 21, 0.8);
-          }
-          100% {
-            text-shadow: 0 0 25px rgba(255, 87, 34, 0.8), 0 0 100px rgba(255, 87, 34, 0.8), 0 0 20px rgba(255, 87, 34, 0.8), 0 0 30px rgba(255, 87, 34, 0.8);
-          }
+        @keyframes glowing2 {
+			0% {
+				filter: drop-shadow(0 0 5px rgba(255, 87, 34, 0.8)) drop-shadow(0 0 10px rgba(255, 87, 34, 0.8)) drop-shadow(0 0 15px rgba(255, 87, 34, 0.8)) drop-shadow(0 0 20px rgba(255, 87, 34, 0.8));
+			  }
+			  50% {
+				filter: drop-shadow(0 0 10px rgba(216, 67, 21, 0.8)) drop-shadow(0 0 20px rgba(216, 67, 21, 0.8)) drop-shadow(0 0 30px rgba(216, 67, 21, 0.8)) drop-shadow(0 0 40px rgba(216, 67, 21, 0.8));
+			  }
+			  100% {
+				filter: drop-shadow(0 0 12.5px rgba(255, 87, 34, 0.8)) drop-shadow(0 0 50px rgba(255, 87, 34, 0.8)) drop-shadow(0 0 15px rgba(255, 87, 34, 0.8)) drop-shadow(0 0 20px rgba(255, 87, 34, 0.8));
+			  }
         
         }
       `}
