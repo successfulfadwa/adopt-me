@@ -5,13 +5,8 @@ import { useState } from "react";
 import AdoptedPetContext from "./AdoptedPetContext";
 import Details from "./Details";
 import SearchParams from "./SearchParams";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faInstagram, faTiktok, faYoutube, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 // Add the Font Awesome brand icons to the library
-library.add(fab);
 /*const StyledContent = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -25,9 +20,7 @@ const queryClient = new QueryClient({
     },
   },
 });
-const iconStyle = {
-  color: '#f5773d'
-};
+
 
 
 const App = () => {
@@ -101,7 +94,7 @@ const App = () => {
           textAlign: 'center'
           ,color:'#f5773d'
         }}>
-         hi
+<img src="./instagram.png" alt="instagram"></img>
         </div>
       </div>
        
