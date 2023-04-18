@@ -1,53 +1,53 @@
-import React, { useState, useEffect } from 'react';
 
 const LoadingPage = () => {
-  const [showGradient, setShowGradient] = useState(false);
-
-  useEffect(() => {
-    // Show the gradient after a short delay
-    const timeoutId = setTimeout(() => {
-      setShowGradient(true);
-    }, 500);
-
-    // Clear the timeout if the component is unmounted or the delay changes
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, []);
-
-  const gradientStyle = {
-    backgroundColor: 'rgb(251,193,161)',
-    background: showGradient ? 'linear-gradient(180deg, rgba(251,193,161,1) 0%, rgba(255,122,47,0.22454919467787116) 100%)' : 'rgb(251,193,161)',
-    transition: 'background 2s ease-in-out',
-  };
 
   return (
-    <div className="loading-page" style={gradientStyle}>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="xMidYMid"
-      >
-        <circle
-          cx="50"
-          cy="50"
-          fill="none"
-          stroke="#ffffff"
-          strokeWidth="10"
-          r="35"
-          strokeDasharray="164.93361431346415 56.97787143782138"
+    <div className="globload">
+      <div id="logo-loading" className="spinner animated fadeIn">
+        {/* LOGO */}
+        <svg
+          width="80"
+          height="80"
+          viewBox="0 0 40 40"
+          style={{
+            position: "absolute",
+            left: 0,
+            right: 0,
+            top: 0,
+            bottom: 0,
+            margin: "auto",
+          }}
         >
-          <animateTransform
-            attributeName="transform"
-            type="rotate"
-            repeatCount="indefinite"
-            dur="1s"
-            values="0 50 50;360 50 50"
-            keyTimes="0;1"
-          ></animateTransform>
-        </circle>
-      </svg>
-      <p>Loading...</p>
+          <svg width="0" height="0">
+            <defs>
+              <linearGradient
+                id="myGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="10%" stopColor="#FFF6B7" />
+                <stop offset="100%" stopColor="#F6416C" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <polygon
+            points="0 0 0 40 40 40 40 0"
+            className="rect"
+            style={{
+              fill: "none",
+              strokeWidth: "8px",
+              stroke: "url(#myGradient)",
+              strokeDasharray: "40",
+              strokeDashoffset: "50%",
+              WebkitAnimation: "movedash 1.5s forwards 0s infinite",
+              animation: "movedash 1.5s forwards 0s infinite",
+            }}
+          ></polygon>
+        </svg>
+        {/* <h6>LOADING</h6> */}
+      </div>
     </div>
   );
 };
