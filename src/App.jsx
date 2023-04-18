@@ -7,6 +7,10 @@ import Details from "./Details";
 import SearchParams from "./SearchParams";
 import Side from "./side";
 import Footer from "./Footer";
+import LoadingPage from './LoadingPage';
+import React, {  useEffect } from 'react';
+
+
 
 
 // Add the Font Awesome brand icons to the library
@@ -28,8 +32,20 @@ const queryClient = new QueryClient({
 
 const App = () => {
   const adoptedPet = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a delay for the sake of demonstration
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
   return (
     <div>
+       {isLoading ? (
+        <LoadingPage />
+      ) : (
+      <div>
       <Side/>
 <BrowserRouter>
   <AdoptedPetContext.Provider value={adoptedPet}>
@@ -54,6 +70,9 @@ const App = () => {
     </QueryClientProvider>
   </AdoptedPetContext.Provider>
 </BrowserRouter>
+
+    </div>
+          )}
 
     </div>
   );
