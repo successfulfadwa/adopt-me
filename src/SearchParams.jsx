@@ -47,9 +47,10 @@ const SearchParams = () => {
   const pets = results?.data?.pets ?? [];
 
   return (
+    <div   >
     <div className="search-params" >
       <form
-      data-aos="fade-right"
+    
         onSubmit={(e) => {
           e.preventDefault();
           const formData = new FormData(e.target);
@@ -138,6 +139,7 @@ const SearchParams = () => {
         <button>Submit</button>
       </form>
       <Results pets={pets} />
+    </div>
     </div>
   );
 };

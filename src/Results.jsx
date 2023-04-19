@@ -7,6 +7,10 @@ const Results = ({ pets }) => {
   }
 
   return (
+    <div
+
+    data-aos="fade-left" 
+    data-aos-duration="1000" >
     <div className="search">
       {pets.map((pet) => {
         return (
@@ -22,6 +26,7 @@ const Results = ({ pets }) => {
         );
       })}
     </div>
+  </div>
   );
 };
 

@@ -13,6 +13,8 @@ import React, {  useEffect } from 'react';
 
 
 
+
+
 // Add the Font Awesome brand icons to the library
 /*const StyledContent = styled.div`
 	display: flex;
@@ -45,7 +47,7 @@ const App = () => {
        {isLoading ? (
         <LoadingPage />
       ) : (
-      <div>
+      <div >
       <Side/>
 <BrowserRouter>
   <AdoptedPetContext.Provider value={adoptedPet}>
