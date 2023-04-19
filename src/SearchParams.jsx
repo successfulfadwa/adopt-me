@@ -1,37 +1,11 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import Results from "./Results";
 import AdoptedPetContext from "./AdoptedPetContext";
 import useBreedList from "./useBreedList";
 import fetchSearch from "./fetchSearch";
+
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
-import AOS from 'aos';
-
-import 'aos/dist/aos.css'; // Import AOS CSS
-if (typeof window !== 'undefined') {
-AOS.init({
-  // Global settings:
-  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-  initClassName: 'aos-init', // class applied after initialization
-  animatedClassName: 'aos-animate', // class applied on animation
-  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-  
-
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 400, // values from 0 to 3000, with step 50ms
-  easing: 'ease', // default easing for AOS animations
-  once: false, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
-});
-}
 
 const SearchParams = () => {
   const [requestParams, setRequestParams] = useState({
@@ -42,15 +16,21 @@ const SearchParams = () => {
   const [adoptedPet] = useContext(AdoptedPetContext);
   const [animal, setAnimal] = useState("");
   const [breeds] = useBreedList(animal);
+  const [isLoaded, setIsLoaded] = useState(false); // state variable for animation
 
   const results = useQuery(["search", requestParams], fetchSearch);
   const pets = results?.data?.pets ?? [];
 
+  useEffect(() => {
+    if (results?.isSuccess) {
+      setIsLoaded(true);
+    }
+  }, [results]);
+
   return (
-    <div   >
-    <div className="search-params" >
+    <div >
+<div className="search-params" style={{ animation: isLoaded ? 'fadein 1s ease-in-out forwards, slide-fade-in 1s ease-in-out forwards' : 'fadein 1s ease-in-out forwards' }}>
       <form
-    
         onSubmit={(e) => {
           e.preventDefault();
           const formData = new FormData(e.target);
@@ -138,8 +118,8 @@ const SearchParams = () => {
 
         <button>Submit</button>
       </form>
+      </div>
       <Results pets={pets} />
-    </div>
     </div>
   );
 };
