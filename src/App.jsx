@@ -7,13 +7,8 @@ import Details from "./Details";
 import SearchParams from "./SearchParams";
 import Side from "./side";
 import Footer from "./Footer";
-import LoadingPage from './LoadingPage';
-import { useEffect, useRef } from 'react';
-
-
-
-
-
+import LoadingPage from "./LoadingPage";
+import { useEffect, useRef } from "react";
 
 // Add the Font Awesome brand icons to the library
 /*const StyledContent = styled.div`
@@ -30,8 +25,6 @@ const queryClient = new QueryClient({
   },
 });
 
-
-
 const App = () => {
   const adoptedPet = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -46,49 +39,50 @@ const App = () => {
 
   useEffect(() => {
     if (!isLoading && headerRef.current) {
-      headerRef.current.setAttribute('data-aos', 'fade-out');
-      headerRef.current.setAttribute('data-aos-easing', 'linear');
-      headerRef.current.setAttribute('data-aos-duration', '1000');
+      headerRef.current.setAttribute("data-aos", "fade-out");
+      headerRef.current.setAttribute("data-aos-easing", "linear");
+      headerRef.current.setAttribute("data-aos-duration", "1000");
     }
   }, [isLoading]);
 
   return (
     <div>
-       {isLoading ? (
+      {isLoading ? (
         <LoadingPage />
       ) : (
-      <div >
-        <Side/>
-        <BrowserRouter>
-          <AdoptedPetContext.Provider value={adoptedPet}>
-            <QueryClientProvider client={queryClient}>
-              <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-                <div ref={headerRef}>
-        {/* Main content */}
-        <header>
+        <div>
+          <Side />
+          <BrowserRouter>
+            <AdoptedPetContext.Provider value={adoptedPet}>
+              <QueryClientProvider client={queryClient}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    minHeight: "100vh",
+                  }}
+                >
+                  <div ref={headerRef}>
+                    {/* Main content */}
+                    <header>
+                      <Link to="/">Adopt Me!</Link>
+                    </header>
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <Routes>
+                      <Route path="/details/:id" element={<Details />} />
+                      <Route path="/" element={<SearchParams />} />
+                    </Routes>
+                  </div>
 
-          <Link to="/">Adopt Me!</Link>
-        </header>
+                  {/* Footer */}
+                  <Footer />
+                </div>
+              </QueryClientProvider>
+            </AdoptedPetContext.Provider>
+          </BrowserRouter>
         </div>
-        <div style={{ flex: 1 }}>
-          <Routes>
-            <Route path="/details/:id" element={<Details />} />
-            <Route path="/" element={<SearchParams />} />
-          </Routes>
-        </div>
-
-        {/* Footer */}
-        <Footer/>
-
-
-      </div>
-    </QueryClientProvider>
-  </AdoptedPetContext.Provider>
-</BrowserRouter>
-
-    </div>
-          )}
-
+      )}
     </div>
   );
 };

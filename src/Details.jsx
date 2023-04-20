@@ -6,10 +6,10 @@ import Modal from "./Modal";
 import ErrorBoundary from "./ErrorBoundary";
 import fetchPet from "./fetchPet";
 import Carousel from "./Carousel";
-import AOS from 'aos';
-import { useEffect } from 'react';
+import AOS from "aos";
+import { useEffect } from "react";
 
-import 'aos/dist/aos.css'; // Import AOS CSS
+import "aos/dist/aos.css"; // Import AOS CSS
 const Details = () => {
   const { id } = useParams();
   const [showModal, setShowModal] = useState(false);
@@ -22,7 +22,7 @@ const Details = () => {
   }, []);
   if (results.isLoading) {
     return (
-      <div    className="loading-pane">
+      <div className="loading-pane">
         <h2 className="loader">⏳</h2>
       </div>
     );
@@ -31,41 +31,36 @@ const Details = () => {
   const pet = results.data.pets[0];
 
   return (
-    <div className="details"   >
-    <div data-aos="fade-in" >
-      <Carousel images={pet.images} />
-      <div>
-        <h1>{pet.name}</h1>
-        <h2>{`${pet.animal} — ${pet.breed} — ${pet.city}, ${pet.state}`}</h2>
+    <div className="details">
+      <div data-aos="fade-in">
+        <Carousel images={pet.images} />
+        <div>
+          <h1>{pet.name}</h1>
+          <h2>{`${pet.animal} — ${pet.breed} — ${pet.city}, ${pet.state}`}</h2>
 
+          <button onClick={() => setShowModal(true)}>Adopt {pet.name}</button>
 
-		
-        <button onClick={() => setShowModal(true)}>Adopt {pet.name}</button>
-
-
-
-		
-        <p>{pet.description}</p>
-        {showModal ? (
-          <Modal>
-            <div>
-              <h1>Would you like to adopt {pet.name}?</h1>
-              <div className="buttons">
-                <button
-                  onClick={() => {
-                    setAdoptedPet(pet);
-                    navigate("/");
-                  }}
-                >
-                  Yes
-                </button>
-                <button onClick={() => setShowModal(false)}>No</button>
+          <p>{pet.description}</p>
+          {showModal ? (
+            <Modal>
+              <div>
+                <h1>Would you like to adopt {pet.name}?</h1>
+                <div className="buttons">
+                  <button
+                    onClick={() => {
+                      setAdoptedPet(pet);
+                      navigate("/");
+                    }}
+                  >
+                    Yes
+                  </button>
+                  <button onClick={() => setShowModal(false)}>No</button>
+                </div>
               </div>
-            </div>
-          </Modal>
-        ) : null}
+            </Modal>
+          ) : null}
+        </div>
       </div>
-    </div>
     </div>
   );
 };

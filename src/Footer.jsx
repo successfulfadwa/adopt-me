@@ -25,29 +25,28 @@ const Footer = () => {
             />
           </div>
         </div>
- 
 
         <div
-  style={{
-    padding: "0.57rem",
-    textAlign: "center",
-    position: "relative",
-    fontFamily: "lucida sans unicode", // Specify the web-safe font family
-    color: "#8B4513",
-  }}
->
-  Designed & Built by
-  <a
-    href="https://github.com/successfulfadwa"
-    className="link"
+          style={{
+            padding: "0.57rem",
+            textAlign: "center",
+            position: "relative",
+            fontFamily: "lucida sans unicode", // Specify the web-safe font family
+            color: "#8B4513",
+          }}
+        >
+          Designed & Built by
+          <a
+            href="https://github.com/successfulfadwa"
+            className="link"
 
-    // Apply the "link" class to the link element
-  >
-    {" "}
-    Fadwa Aljaoui
-  </a>
-  <style>
-    {`
+            // Apply the "link" class to the link element
+          >
+            {" "}
+            Fadwa Aljaoui
+          </a>
+          <style>
+            {`
    .link {
     color: #BF2020;
     text-decoration: none;
@@ -59,8 +58,8 @@ const Footer = () => {
   }
   
     `}
-  </style>
-</div>
+          </style>
+        </div>
 
         {/* Footer content */}
       </footer>
