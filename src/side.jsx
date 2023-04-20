@@ -40,8 +40,9 @@ const Side = () => {
             }}
           >
             <span style={{ position: "relative", color: "#f5773d" }}>
-              Adopt.Me@gmail.com
-              <style>
+            <a href="mailto:fadwa.aljaoui.tech@gmail.com" style={{ textDecoration: "none", color: "#f5773d" }}>
+    Adopt.Me@gmail.com
+  </a>              <style>
                 {`
         span:hover {
           color: #D66712 !important;
