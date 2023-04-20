@@ -48,7 +48,7 @@ const App = () => {
     if (!isLoading && headerRef.current) {
       headerRef.current.setAttribute('data-aos', 'fade-out');
       headerRef.current.setAttribute('data-aos-easing', 'linear');
-      headerRef.current.setAttribute('data-aos-duration', '');
+      headerRef.current.setAttribute('data-aos-duration', '1000');
     }
   }, [isLoading]);
 
