@@ -28,7 +28,7 @@ const SearchParams = () => {
   }, [results]);
 
   return (
-    <div className="search-params" >
+    <div  >
 <div className="search-params" style={{ animation: isLoaded ? 'fadein 1s ease-in-out forwards, slide-fade-in 1.6s ease-in-out forwards' : 'fadein 1s ease-in-out forwards' }}>
       <form
         onSubmit={(e) => {

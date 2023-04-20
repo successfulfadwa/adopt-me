@@ -33,7 +33,27 @@
 	padding: 35px 15px 15px 15px;
 	float: left;
   }
-   .search-paramss {
+  .results {
+	transform: translateX(90%);
+	animation-name: slide-fade-in;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide-fade-in2 {
+	0% {
+		transform: translateX(20%);
+	  }
+	  50% {
+		transform: translateX(0);
+	  }
+	  100% {
+		transform: translateX(0);
+	  }
+  }
+  
+   .search-params {
 	transform: translateX(-90%);
 	animation-name: slide-fade-in;
 	animation-duration: 100s;
