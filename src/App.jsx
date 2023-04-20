@@ -8,7 +8,7 @@ import SearchParams from "./SearchParams";
 import Side from "./side";
 import Footer from "./Footer";
 import LoadingPage from './LoadingPage';
-import React, {  useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 
 
@@ -35,6 +35,7 @@ const queryClient = new QueryClient({
 const App = () => {
   const adoptedPet = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const headerRef = useRef(null);
 
   useEffect(() => {
     // Simulate a delay for the sake of demonstration
@@ -42,19 +43,27 @@ const App = () => {
       setIsLoading(false);
     }, 1400);
   }, []);
+
+  useEffect(() => {
+    if (!isLoading && headerRef.current) {
+      headerRef.current.setAttribute('data-aos', 'fade-out');
+      headerRef.current.setAttribute('data-aos-easing', 'linear');
+      headerRef.current.setAttribute('data-aos-duration', '');
+    }
+  }, [isLoading]);
+
   return (
     <div>
        {isLoading ? (
         <LoadingPage />
       ) : (
       <div >
-      <Side/>
-<BrowserRouter>
-  <AdoptedPetContext.Provider value={adoptedPet}>
-    <QueryClientProvider client={queryClient}>
-      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <div data-aos="fade-up"
-   data-aos-duration="3000">
+        <Side/>
+        <BrowserRouter>
+          <AdoptedPetContext.Provider value={adoptedPet}>
+            <QueryClientProvider client={queryClient}>
+              <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+                <div ref={headerRef}>
         {/* Main content */}
         <header>
 
