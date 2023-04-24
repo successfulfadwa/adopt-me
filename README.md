@@ -8,7 +8,7 @@ This project is a pet adoption website built using modern web development tools 
 
 ## Demo
 
-Check out the demo of this project at [https://lnkd.in/eRxsEum2](https://lnkd.in/eRxsEum2).
+Check out the demo of this project at [Demo](https://lnkd.in/eRxsEum2).
 
 ## Features
 
