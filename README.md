@@ -1,5 +1,9 @@
 # Adopt Me Project
 
+<div style="text-align:center"><img src="./AdoptMe.png" alt="Adopt Me Project"></div>
+
+---
+
 This project is a pet adoption website built using modern web development tools and techniques. It was created and designed by [Fadwa Aljaoui](https://www.linkedin.com/in/fadwa-aljaoui-5846b523b/).
 
 ## Demo
