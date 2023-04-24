@@ -2,6 +2,10 @@
 
 This project is a pet adoption website built using modern web development tools and techniques. It was created and designed by [Fadwa Aljaoui](https://www.linkedin.com/in/fadwa-aljaoui-5846b523b/).
 
+## Demo
+
+Check out the demo of this project at [https://lnkd.in/eRxsEum2](https://lnkd.in/eRxsEum2).
+
 ## Features
 
 - Browse pets available for adoption
